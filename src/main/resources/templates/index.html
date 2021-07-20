@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+</head>
+<body>
+	<div align="center">
+		<h1>Welcome to Messaging Page</h1>
+		<form action="#" th:action="@{/messaging}" th:object="${message}" method="post">
+		
+		<label>Message</label> 
+		<input type="text" name="message">
+
+		<input type="submit" value="Submit"/>
+
+</form>
+
+	</div>
+
+</body>
+</html>
