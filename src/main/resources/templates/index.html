@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+ Welcome to Thymeleaf
+ <p th:text="${myobj}">Default Text to be displayed</p> 
+ <input type="text" id="name" name="name" th:value="*{myobj}" />
+<!--  <p th:text="${mybooks}"></p> -->
+  
+ <table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th> Name </th>
+            <th> Author </th>
+        </tr>
+    </thead>
+    
+    <tbody>
+	
+        <tr th:each="book : ${mybooks}">
+            <td><span th:text="${book.id}"> Id </span></td>
+            <td><span th:text="${book.name}"> Name </span></td>
+            <td><span th:text="${book.author}"> Author </span></td>
+        </tr>
+    </tbody>
+</table>
+ 
+ 
+</body>
+</html>
